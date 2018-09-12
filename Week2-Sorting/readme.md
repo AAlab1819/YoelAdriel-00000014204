@@ -27,9 +27,9 @@ solution link - http://codeforces.com/contest/291/submission/42771499
 768a- Oath of the night's watch
 
 The objective is to find if there a number that smaller and bigger than other number. 
-So we gonna sort it first. arr[0] will be the smallest number and
-arr[n-1] is the biggest number. so every number that is bigger 
+arr[0] will be the smallest number and arr[n-1] is the biggest number. so every number that is bigger 
 than arr[0] and smaller than arr[n-1] is what we need. So we will sum all the number that 
-have that condition.
+have that condition. To do this we need to sort the array value, i use radix sort. so the program will grouping
+the individual digit of the value than sort it from the smallest
 
 solution link - http://codeforces.com/contest/768/submission/42805505
