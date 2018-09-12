@@ -32,4 +32,4 @@ arr[n-1] is the biggest number. so every number that is bigger
 than arr[0] and smaller than arr[n-1] is what we need. So we will sum all the number that 
 have that condition.
 
-solution link - 
+solution link - http://codeforces.com/contest/768/submission/42805505
