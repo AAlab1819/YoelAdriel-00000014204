@@ -4,10 +4,10 @@ In this problem we need to find the number of times Manao has to push a button i
 The rule is if Manao press wrong button than all the button unpress. 
 So if we want to find 2 3 1
 the worst case scenario is like this
-1
-3
-2 1
-2 3 1
+1 <br />
+3 <br />
+2 1 <br />
+2 3 1 <br />
 
 so manao has to push 7 button to unlock the lock. 
 in this code we are using this 
