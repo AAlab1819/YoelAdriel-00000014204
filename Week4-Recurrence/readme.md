@@ -3,7 +3,7 @@ Problem 268 B - Buttons
 In this problem we need to find the number of times Manao has to push a button in the worst-case scenario.
 The rule is if Manao press wrong button than all the button unpress. 
 So if we want to find 2 3 1
-the worst case scenario is like this
+the worst case scenario is like this <br />
 1 <br />
 3 <br />
 2 1 <br />
