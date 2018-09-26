@@ -26,4 +26,9 @@ submission link - http://codeforces.com/problemset/submission/268/43358727
 
 Problem 598 D - Igor In the Museum
 
+In this problem we need to find out how many pic igor can see. IF . and * adjacent thats mean igor can see one 
+picture. Igor only can move from . to .
+
+
+submission link - http://codeforces.com/contest/598/submission/43419391
 
