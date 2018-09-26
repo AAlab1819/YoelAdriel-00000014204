@@ -1,72 +1,65 @@
 #include <bits/stdc++.h>
-
-#define ALL(x) x.begin(), x.end()
-#define MAXX 1005
-#define MAXY 1005
-
 using namespace std;
 
-typedef long long int LL;
+char value[1000][1000];
+int ans[1000000]={0};
+int visited[1000][1000]={0};
+int total=0;
+int answer=0;
+int n,m,k,x,y;
 
-int n,m,k;
-char matrix [MAXY][MAXX];
-int sol [MAXY][MAXX];
-bool visited [MAXY][MAXX];
-vector<pair<int,int> > add;
-
-int dfs(int x, int y)
+//floodfill algorithm function
+void floodFill(int row, int col, int n, int m) 
 {
-    visited[y][x] = true;
-    add.push_back(make_pair(x,y));
-    int sum = 0;
-    for(int i = -1; i <=1; i +=2){
-        if(y+i >= 0 and y+i < n){
-            if(matrix[y+i][x] == '*')
-                sum++;
-            else if(matrix[y+i][x] == '.' and !visited[y+i][x])
-                sum += dfs(x,y+i);
-        }
-        if(x+i >= 0 and x+i < m){
-            if(matrix[y][x+i] == '*')
-                sum++;
-            else if(matrix[y][x+i] == '.' and !visited[y][x+i])
-                sum += dfs(x+i,y);
-        }
-    }
-    return sum;
+	if(row<0||col<0||row>=n||col>=m) return;
+	if(visited[row][col]!=0) return;
+	if(value[row][col]=='*')
+	{
+	    total++;
+	    return;
+	}
+		
+	visited[row][col]=answer;
+	floodFill(row-1,col,n,m);
+	floodFill(row+1,col,n,m);
+	floodFill(row,col-1,n,m);
+	floodFill(row,col+1,n,m);
+	return;
 }
 
-void putvalue(int value)
+int main() 
 {
-    for(int i = 0; i < add.size(); ++i)
-        sol[add[i].second][add[i].first] = value;
-    add.clear();
-}
+	cin>>n>>m>>k;
 
-int main()
-{
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    //to input the value layout
+	for(int i=0; i<n; i++) 
+	{
+		for(int j=0; j<m; j++) 
+		{
+			cin>>value[i][j];
+		}
+	}
 
-    cin >> n >> m >> k;
-
-    for(int i = 0; i < n; ++i)
-        for(int j = 0; j < m; ++j)
-            cin >> matrix[i][j];
-
-    for(int i = 0; i < n; ++i)
-        for(int j = 0; j < m; ++j)
-            if(matrix[i][j] != '*' and !visited[i][j])
-                putvalue(dfs(j,i));
-
-
-
-
-    for(int i = 0; i < k; ++i){
-        int a,b;
-        cin >> a >> b; a--; b--;
-        cout << sol[a][b] << '\n';
-    }
-
-    return 0;
+    //to count the total pictures
+	for(int i=0; i<n; i++) 
+	{
+		for(int j=0; j<m; j++) 
+		{
+			{
+			    answer++;
+			    total=0;
+			    floodFill(i,j,n,m);
+			    ans[answer]=total;
+		    }
+		}
+	}
+	
+    //to print the amount of total pictures
+	for(int i=0; i<k; i++) 
+	{ 
+		cin>>x>>y;
+		
+		cout<<ans[visited[x-1][y-1]]<<endl;
+	}
+	return 0;
 }
