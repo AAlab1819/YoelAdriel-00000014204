@@ -30,24 +30,24 @@ In this problem we need to find out how many pic igor can see. IF (.) and (*) ad
 picture. Igor only can move from (.) to (.)
 first we will input how many row,col, and the position. after that we will input (.) and (*) it will be store at value[i][j]
 at this program we use floodfill  to count how many pic that igor can see. For every visited cell we will mark it as 0 so 
-program will only check for cell than havent been visited
-if(visited[row][col]!=0) return;
-to check the surrounding of igor location we use recursive function 
-	floodFill(row-1,col,n,m);
-	floodFill(row+1,col,n,m);
-	floodFill(row,col-1,n,m);
-	floodFill(row,col+1,n,m);
+program will only check for cell than havent been visited <br />
+if(visited[row][col]!=0) return; <br />
+to check the surrounding of igor location we use recursive function <br />
+	floodFill(row-1,col,n,m); <br />
+	floodFill(row+1,col,n,m); <br />
+	floodFill(row,col-1,n,m);<br />
+	floodFill(row,col+1,n,m);<br />
   
 to show the total picture we use
-for(int i=0; i<n; i++) 
+for(int i=0; i<n; i++) <br />
 	{
-		for(int j=0; j<m; j++) 
+		for(int j=0; j<m; j++) <br />
 		{
 			{
-			    answer++;
-			    total=0;
-			    floodFill(i,j,n,m);
-			    ans[answer]=total;
+			    answer++;<br />
+			    total=0;<br />
+			    floodFill(i,j,n,m); <br />
+			    ans[answer]=total;<br />
 		    }
 		}
 	}
@@ -57,5 +57,5 @@ and print it using cout<<ans[visited[x-1][y-1]]<<endl;
 
 
 
-submission link - https://codeforces.com/problemset/submission/598/43458671
+submission link - http://codeforces.com/contest/598/submission/43459799
 
