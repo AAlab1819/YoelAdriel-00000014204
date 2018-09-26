@@ -30,5 +30,5 @@ In this problem we need to find out how many pic igor can see. IF . and * adjace
 picture. Igor only can move from . to .
 
 
-submission link - http://codeforces.com/contest/598/submission/43419391
+submission link - https://codeforces.com/problemset/submission/598/43458671
 
