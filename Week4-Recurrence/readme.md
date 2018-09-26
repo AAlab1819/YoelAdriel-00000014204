@@ -26,8 +26,35 @@ submission link - http://codeforces.com/problemset/submission/268/43358727
 
 Problem 598 D - Igor In the Museum
 
-In this problem we need to find out how many pic igor can see. IF . and * adjacent thats mean igor can see one 
-picture. Igor only can move from . to .
+In this problem we need to find out how many pic igor can see. IF (.) and (*) adjacent thats mean igor can see one 
+picture. Igor only can move from (.) to (.)
+first we will input how many row,col, and the position. after that we will input (.) and (*) it will be store at value[i][j]
+at this program we use floodfill  to count how many pic that igor can see. For every visited cell we will mark it as 0 so 
+program will only check for cell than havent been visited
+if(visited[row][col]!=0) return;
+to check the surrounding of igor location we use recursive function 
+	floodFill(row-1,col,n,m);
+	floodFill(row+1,col,n,m);
+	floodFill(row,col-1,n,m);
+	floodFill(row,col+1,n,m);
+  
+to show the total picture we use
+for(int i=0; i<n; i++) 
+	{
+		for(int j=0; j<m; j++) 
+		{
+			{
+			    answer++;
+			    total=0;
+			    floodFill(i,j,n,m);
+			    ans[answer]=total;
+		    }
+		}
+	}
+
+and print it using cout<<ans[visited[x-1][y-1]]<<endl;
+
+
 
 
 submission link - https://codeforces.com/problemset/submission/598/43458671
