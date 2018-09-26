@@ -8,7 +8,6 @@ int total=0;
 int answer=0;
 int n,m,k,x,y;
 
-//floodfill algorithm function
 void floodFill(int row, int col, int n, int m) 
 {
 	if(row<0||col<0||row>=n||col>=m) return;
@@ -31,7 +30,7 @@ int main()
 {
 	cin>>n>>m>>k;
 
-    //to input the value layout
+
 	for(int i=0; i<n; i++) 
 	{
 		for(int j=0; j<m; j++) 
@@ -40,7 +39,7 @@ int main()
 		}
 	}
 
-    //to count the total pictures
+
 	for(int i=0; i<n; i++) 
 	{
 		for(int j=0; j<m; j++) 
@@ -53,8 +52,7 @@ int main()
 		    }
 		}
 	}
-	
-    //to print the amount of total pictures
+
 	for(int i=0; i<k; i++) 
 	{ 
 		cin>>x>>y;
