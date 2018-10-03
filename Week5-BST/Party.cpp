@@ -7,6 +7,7 @@ int main()
     int n , ans = 0 , count = 0;
     cin >> n;
     int a[n];
+    if ( 1 <= n < 2000){
     for(int i = 1 ; i <= n ;i++)
         cin >> a[i];
     for(int i = 1 ; i <= n ;i++)
@@ -20,6 +21,6 @@ int main()
         }
         ans = max(ans , count);
     }
-    cout << ans;
+    cout << ans;}
     return 0;
 }
