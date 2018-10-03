@@ -12,6 +12,11 @@ submission link - http://codeforces.com/problemset/submission/115/43735363
 
 913B Christmas Spurce
 
+In this problem we need to find spruce and it must have at least 3 leaf children. first we input the number of vertoces. after the program simulate the tree that we alrdy got from the input, the program will check if there is 3 leaf or more . If there is 3 or more than the program will print out yes. 
+
+complexity O(n log n)
+submission link - http://codeforces.com/problemset/submission/913/43738372
+
 
 4C Registration system 
 
